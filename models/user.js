@@ -8,4 +8,3 @@ const userSchema = new Schema({
 // First argument is name of collection, second 
 // argument userSchema
 mongoose.model('users', userSchema);
-
