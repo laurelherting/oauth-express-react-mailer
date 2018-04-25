@@ -33,7 +33,7 @@ passport.use(
           // make a new record.
           new user({ googleId: profile.id })
             .save()
-           .then(user => done(null, user));
+            .then(user => done(null, user));
         }
       });
     }
