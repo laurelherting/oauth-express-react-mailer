@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import SurveyField from './SurveyField';
 
 const FIELDS = [
-  { label: 'Survey Title', name: 'title' },
-  { label: 'Subject Line', name: 'subject' },
-  { label: 'Email Body', name: 'body' },
-  { label: 'Recipient List', name: 'emails' },
+  { label: 'Survey Title', name: 'title', noValueError: 'Provide a Survey Title' },
+  { label: 'Subject Line', name: 'subject', noValueError: 'Provide a Subject' },
+  { label: 'Email Body', name: 'body', noValueError: 'Provide a Message' },
+  { label: 'Recipient List', name: 'emails', noValueError: 'Provide an Email' },
 ];
 
 class SurveyForm extends Component {
@@ -47,21 +47,11 @@ class SurveyForm extends Component {
 function validate(values) {
   const errors = {};
 
-  if (!values.title) {
-    errors.title = 'You must provide a title';
-  }
-
-  if (!values.subject) {
-    errors.title = 'You must provide a subject';
-  }
-
-  if (!values.body) {
-    errors.title = 'You must provide a body';
-  }
-
-  if (!values.subject) {
-    errors.emails = 'You must provide an email';
-  }
+  _.each(FIELDS, ({ name, noValueError }) => {
+    if (!values[name]) {
+      errors[name] = noValueError;
+    }
+  });
 
   return errors;
 }
