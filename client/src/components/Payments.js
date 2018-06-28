@@ -6,6 +6,8 @@ import * as actions from '../actions';
 class Payments extends Component {
   render() {
     return (
+
+      // eslint-disable-next-line
       <StripeCheckout
         name="Emaily"
         description="$5 for 5 email credits"
