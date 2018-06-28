@@ -9,6 +9,8 @@ class Header extends Component {
       case null:
         return;
       case false:
+
+        // eslint-disable-next-line
         return <li><a href="/auth/google">Login With Google</a></li>;
       default:
         return [

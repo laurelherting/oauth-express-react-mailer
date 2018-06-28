@@ -2,6 +2,8 @@ import React from 'react';
 
 const Landing = () => {
   return (
+
+    // eslint-disable-next-line
     <div style={{ textAlign: 'center' }}>
       <h1>
         Emaily!
