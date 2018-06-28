@@ -1,4 +1,9 @@
 node_modules
 dev.js
-yarn-error.log
-yarn-debug.log
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
