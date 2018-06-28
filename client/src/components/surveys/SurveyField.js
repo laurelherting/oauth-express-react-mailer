@@ -4,6 +4,7 @@ import React from 'react';
 
 export default ({ input, label, meta: { error, touched } }) => {
   return (
+    // eslint-disable-next-line
     <div>
       <label>{label}</label>
       <input {...input} style={{ marginBottom: '5px' }} />
