@@ -1,14 +1,16 @@
 // SurveyFormReview shows users their form inputs for review
 import _ from 'lodash';
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import formFields from './formFields';
-import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
-const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
+const SurveyFormReview = ({
+  onCancel, formValues, submitSurvey, history }) => {
   const reviewFields = _.map(formFields, ({ name, label }) => {
     return (
+    // eslint-disable-next-line
       <div key={name}>
         <label>{label}</label>
         <div>
