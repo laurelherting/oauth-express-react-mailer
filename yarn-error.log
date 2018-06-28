@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/laurelherting/.nvm/versions/node/v8.9.1/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js remove eslint-plugin-jsx-a11y
+  /Users/laurelherting/.nvm/versions/node/v8.9.1/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js install --save localtunnel
 
 PATH: 
-  /Users/laurelherting/.nvm/versions/node/v8.9.1/bin:/Users/laurelherting/.zplug/repos/zplug/zplug/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin/:./node_modules/.bin:/Users/laurelherting/.config/nvim/repos/github.com/junegunn/fzf/bin
+  /Users/laurelherting/.zplug/repos/zplug/zplug/bin:/Users/laurelherting/.zplug/bin:/Users/laurelherting/.nvm/versions/node/v8.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:./bin/:./node_modules/.bin:/Users/laurelherting/.config/nvim/repos/github.com/junegunn/fzf/bin:./bin/:./node_modules/.bin
 
 Yarn version: 
   1.5.1
@@ -27,8 +27,9 @@ npm manifest:
       "start": "node index.js",
       "server": "nodemon index.js --ignore client",
       "client": "npm run start --prefix client",
-      "dev": "concurrently \"npm run server\" \"npm run client\"",
-      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+      "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run webhook",
+      "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
+      "webhook": "lt -p 5000 -s lijsbgjjucb"
     },
     "author": "Laurel Herting",
     "license": "ISC",
@@ -52,6 +53,11 @@ npm manifest:
       "eslint-plugin-prettier": "^2.6.0",
       "eslint-plugin-react": "^7.9.1",
       "prettier": "^1.13.5"
+    },
+    "rules": {
+      "react/jsx-filename-extension": [1, {
+        "extensions": [".js", ".jsx"]
+      }]
     }
   }
 
@@ -3205,9 +3211,9 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.2.tgz#8452b4bb7e83c7c188d8041c1a837c773d6d8bb9"
 
 Trace: 
-  Error: This module isn't specified in a manifest.
+  Error: `install` has been replaced with `add` to add new dependencies. Run "yarn add localtunnel" instead.
       at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
-      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:60445:15)
+      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:21987:13)
       at Generator.next (<anonymous>)
       at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
       at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
