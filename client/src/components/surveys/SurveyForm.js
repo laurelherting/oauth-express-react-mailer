@@ -11,6 +11,7 @@ class SurveyForm extends Component {
   renderFields() {
     return _.map(formFields, ({ label, name }) => {
       return (
+        // eslint-disable-next-line
         <Field
           key={name}
           component={SurveyField}
