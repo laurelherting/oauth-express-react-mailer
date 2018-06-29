@@ -2347,6 +2347,12 @@ path-parse@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
 
+path-parser@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/path-parser/-/path-parser-4.1.1.tgz#2cec1eb1251428aa48774a2ef49dddd46083a18b"
+  dependencies:
+    search-params "2.1.3"
+
 path-to-regexp@0.1.7:
   version "0.1.7"
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz#df604178005f522f15eb4490e7247a1bfaa67f8c"
@@ -2692,6 +2698,10 @@ safe-regex@^1.1.0:
 sax@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
+
+search-params@2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/search-params/-/search-params-2.1.3.tgz#90b98964eaf3d0edef0f73e6e8307d1480020413"
 
 semver-diff@^2.0.0:
   version "2.1.0"
